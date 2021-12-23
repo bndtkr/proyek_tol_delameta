@@ -199,6 +199,7 @@ void loop() {
   
   if(kunci == 2 && pass_akhir == 0 && pass_awal == 1){
    delay(500);
+   myservo.write(0);
    buzzer_berhasil();
    Serial.println("PALANG TERTUTUP");
    kondisiLED(0, 1, 0);
@@ -243,5 +244,3 @@ void kondisiLED(int led1, int led2, int led3){
   digitalWrite(ledYellow, led2);
   digitalWrite(ledGreen, led3);
 }
-
-   myservo.write(0);
